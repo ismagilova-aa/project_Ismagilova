@@ -16,6 +16,21 @@
         <img src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
         <input type="text" name="" id="">
         <button>Вход или регистрация</button>
+        <form action="/submit" method="post">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username"
+        placeholder="Введите ваше имя">
+        
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password"
+        placeholder="Введите пароль">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+        placeholder="Введите ваш email">
+        
+            <input type="submit" value="Отправить">
+        </form>    
         <nav>
             <ul>
                 <li><a href="#home">Главная</a></li>
@@ -40,6 +55,10 @@
     </main>
     <footer class="main container">
         <p>Контакты и ссылки на социальные сети</p>
+        <div class="menu">
+            <div class="menu_item menu_item--active">Главная</div>
+            <div class="menu_item">О нас</div>
+        </div>
         <img src="images/images.jpg" alt="Фон" width="700" height="200">
     </footer>
 </body>

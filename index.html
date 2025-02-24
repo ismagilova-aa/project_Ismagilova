@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <header class="header container">
-        <h1>LingvoLand</h1>
-        <img src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
+    <header class="header">
+        <h1 class="header__title">LingvoLand</h1>
+        <img class="haeder__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
         <input type="text" name="" id="">
         <button>Вход или регистрация</button>
         <form action="/submit" method="post">
@@ -31,9 +31,8 @@
         
             <input type="submit" value="Отправить">
         </form>    
-        <nav>
+        <nav class="header__menu">
             <ul>
-                <li><a href="#home">Главная</a></li>
                 <li><a href="#about">О школе</a></li>
                 <li><a href="#about">Процесс обучения</a></li>
                 <li><a href="#about">Языки</a></li>
@@ -42,47 +41,55 @@
             </ul>
         </nav>
     </header>
-    <main class="main container">
+    <main class="main">
         <section id="home">
             <h2>Hello! Bonjour!</h2>
             <img src="images/young-people-talking-different-languages_23-2148377121.avif" alt="Изображение" width="500"
                 height="200">
             <button>Схема обучения</button>
         </section>
-        <section>
+        <section id="news">
             <div>
-                Новости нашей школs
+                Новости нашей школы
             </div>
             <ul>
                 <li>
-                    <p>
-                        На базе нашей школы открылось направление по обучению французскому языку
-                    </p>
+                    <p>На базе нашей школы открылось направление по обучению французскому языку</p>
                     <img src="images/teachers.png" alt="Фотография учителей" width="150" height="180">
                     <a href="#">Узнать подробнее</a>
                 </li>
                 <li>
-                    <p>
-                        Преподаватели нашей школы приняли участие во Всеросийской конференции "Методы преподавания иностанных языков детям начальной школы"
-                    </p>
+                    <p>Преподаватели нашей школы приняли участие во Всеросийской конференции "Методы преподавания иностанных языков детям начальной школы"</p>
                     <img src="images/business-conference.avif" alt="Бизнесс конференция" width="150" height="180">
                     <a href="#">Узнать подробнее</a>
                 </li>
             </ul>
         </section> 
-        <section>
+        <section id="feedbacks">
             <div>
                 Отзывы
             </div>
             <ul>
                 <li>
-                    
+                    <p>Я прошел обучение в онлайн-школе LingvoLand и остался в полном восторге! Преподаватели - настоящие профессионалы, занятия проходят в интерактивном формате. Рекомендую всем, кто хочет быстро и эффективно выучить английский и французский языки!</p> 
+                </li>
+                <li>
+                    <p>Записывала на обучение ребенка. Все очень понравилось! Ребенок в восторге! Преподаватели компетентны в своем деле и приподносят материал в интересной форме. Рекомендую всем.</p>
                 </li>
             </ul>
         </section>
     </main>
-    <footer class="main container">
-        <p>Контакты и ссылки на социальные сети</p>
+    <footer class="footer">
+       <div>
+            Контакты
+       </div>
+            <p>89005553555</p>
+            <p>lingvoland@gmail.com</p>
+        <div>
+            Мы в социальных сетях
+        </div>
+            <p>https://vk.com/lingvoland</p>
+            <p>https://t.me/lingvoland</p>    
         <div class="menu">
             <div class="menu_item menu_item--active">Главная</div>
             <div class="menu_item">О нас</div>

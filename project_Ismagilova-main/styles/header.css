@@ -1,0 +1,21 @@
+.header{
+    background-color: lemonchiffon;
+    color: black;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__link{
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(68, 180, 146);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}

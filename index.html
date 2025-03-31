@@ -11,11 +11,12 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">LingvoLand</h1>
-        <img class="haeder__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
-        <input type="text" name="" id="">
-        <button>Вход или регистрация</button>
+    <header class="header container" >
+        <a>
+            <img class="haeder__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
+            <h1 class="header__title">LingvoLand</h1>
+        </a>
+        <button class="header__button">Вход или регистрация</button>
         <form action="/submit" method="post">
             <label for="username">Имя пользователя:</label>
             <input type="text" id="username" name="username"
@@ -32,26 +33,26 @@
             <input type="submit" value="Отправить">
         </form>    
         <nav class="header__menu">
-            <ul>
-                <li class="menu_item_menu_item--active">
-                    <a class="menu_link" href="#about">О школе</a>
+            <ul class="menu">
+                <li class="menu__item menu__item--active">
+                    <a class="menu__link" href="#about">О школе</a>
                 </li>
-                <li class="menu_item_menu_item--active">
-                    <a class="menu_link" href="#about">Процесс обучения</a>
+                <li class="menu__item menu__item--active">
+                    <a class="menu__link" href="studying.html">Процесс обучения</a>
                 </li>
-                <li class="menu_item_menu_item--active">
-                    <a class="menu_link" href="#about">Языки</a>
+                <li class="menu__item menu__item--active">
+                    <a class="menu__link" href="#about">Языки</a>
                 </li>
-                <li class="menu_item_menu_item--active">
-                    <a class="menu_link" href="teachers.html">Преподаватели</a>
+                <li class="menu__item menu__item--active">
+                    <a class="menu__link" href="teachers.html">Преподаватели</a>
                 </li>
-                <li class="menu_item_menu_item--active">
-                    <a class="menu_link" href="#about">Цены</a>
+                <li class="menu__item menu__item--active">
+                    <a class="menu__link" href="#about">Цены</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="main">
+    <main class="main container">
         <section id="home">
             <h2>Hello! Bonjour!</h2>
             <img src="images/young-people-talking-different-languages_23-2148377121.avif" alt="Изображение" width="500"
@@ -89,7 +90,7 @@
             </ul>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
        <div>
             Контакты
        </div>
@@ -101,8 +102,8 @@
             <p>https://vk.com/lingvoland</p>
             <p>https://t.me/lingvoland</p>    
         <div class="menu">
-            <div class="menu_item menu_item--active">Главная</div>
-            <div class="menu_item">О нас</div>
+            <div class="menu__item menu__item--active">Главная</div>
+            <div class="menu__item">О нас</div>
         </div>
         <img src="images/images.jpg" alt="Фон" width="700" height="200">
     </footer>

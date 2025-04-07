@@ -11,33 +11,19 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">LingvoLand</h1>
-        <img class="haeder__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
-        <input type="text" name="" id="">
-        <button>Вход или регистрация</button>
-        <form action="/submit" method="post">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username"
-        placeholder="Введите ваше имя">
-        
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password"
-        placeholder="Введите пароль">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"
-        placeholder="Введите ваш email">
-        
-            <input type="submit" value="Отправить">
-        </form>    
+    <header class="header container">
+        <a class="header__logo-wrap" href="index.html">
+            <img class="haeder__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
+            <h1 class="header__title">LingvoLand</h1>
+        </a>
+        <div class="header__buttons">
+            <a class="header__button" href="#">Вход</a>
+            <a class="header__button" href="#">Регистрация</a>
+        </div>
         <nav class="header__menu">
-            <ul>
+            <ul class="menu">
                 <li class="menu__item menu__item--active">
-                    <a class="menu__link" href="#about">О школе</a>
-                </li>
-                <li class="menu__item menu__item--active">
-                    <a class="menu__link" href="#about">Процесс обучения</a>
+                    <a class="menu__link" href="studying.html">Процесс обучения</a>
                 </li>
                 <li class="menu__item menu__item--active">
                     <a class="menu__link" href="#about">Языки</a>
@@ -51,7 +37,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main container">
         <div class="teachers">
             <h2 class="teachers_title">Наши преподаватели</h2>
             <div class="teachers_card">
@@ -76,7 +62,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
         <div>
              Контакты
         </div>
@@ -87,10 +73,6 @@
          </div>
              <p>https://vk.com/lingvoland</p>
              <p>https://t.me/lingvoland</p>    
-         <div class="menu">
-             <div class="menu__item menu__item--active">Главная</div>
-             <div class="menu__item">О нас</div>
-         </div>
          <img src="images/images.jpg" alt="Фон" width="700" height="200">
      </footer>
  </body>

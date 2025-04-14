@@ -44,25 +44,31 @@
                 height="200">
         </section>
         <section class="about">
-            <h2 class="about__title">О школе</h2>
-            <p></p>
+            <div class="about__wrap-left">
+                <h2 class="about__title">О нас</h2>
+                <p>Добро пожаловать в LingvoLand - вашу онлайн языковую школу! Здесь мы предлагаем курсы для всех уровней - от начинающего до продвинутого. Наши занятия проходят в интерактивном формате, что позволяет вам погружаться в языковую серду и развивать навыки общения с первых уроков. Мы используем инновационные технологии и ресурсы, чтобы сделать процесс обучения максимально эффективным и увлекательным. Присоединяйся к LingvoLand и открой для себя мир языков вместе с нами!</p>
+                <a class="about__button" href="#">Записаться на курс</a>
+            </div>
+            <div class="about__wrap-right">
+                <img class="about__image" src="images/Online-Learning.jpg" alt="Онлайн занятие" width="500" height="350">
+            </div>
         </section>
         <section id="news">
             <div>
                 Новости нашей школы
             </div>
-            <ul>
-                <li>
-                    <p>На базе нашей школы открылось направление по обучению французскому языку</p>
-                    <img src="images/teachers.png" alt="Фотография учителей" width="150" height="180">
-                    <a href="#">Узнать подробнее</a>
-                </li>
-                <li>
-                    <p>Преподаватели нашей школы приняли участие во Всеросийской конференции "Методы преподавания иностанных языков детям начальной школы"</p>
-                    <img src="images/business-conference.avif" alt="Бизнесс конференция" width="150" height="180">
-                    <a href="#">Узнать подробнее</a>
-                </li>
-            </ul>
+            <div class="news__list">
+                <div class="news__card">
+                    <a class="news__discription">На базе нашей школы открылось направление по обучению французскому языку</a>
+                    <img class="news__image" src="images/teachers.png" alt="Фотография учителей" width="150" height="180">
+                    <a class="news__button" href="#">Узнать подробнее</a>
+                </div>
+                <div class="news__card">
+                    <a class="news__discription">Преподаватели нашей школы приняли участие во Всеросийской конференции "Методы преподавания иностанных языков детям начальной школы"</a>
+                    <img class="news__image" src="images/confernce.jpg.webp" alt="Конференция" width="150" height="180">
+                    <a class="news__button" href="#">Узнать подробнее</a>
+                </div>
+            </div>
         </section> 
         <section id="feedbacks">
             <div>
@@ -86,9 +92,10 @@
             <p>lingvoland@gmail.com</p>
         <div>
             Мы в социальных сетях
-        </div>
-            <p>https://vk.com/lingvoland</p>
-            <p>https://t.me/lingvoland</p>    
+        <ul>
+            <li><a href="https://vk.com/lingvoland">ВКонткате</a></li>
+            <li><a href=https://t.me/lingvoland>Телеграм</a></li>
+        </ul>
         <img src="images/images.jpg" alt="Фон" width="700" height="200">
     </footer>
 </body>

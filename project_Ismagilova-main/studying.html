@@ -11,30 +11,17 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header__title">LingvoLand</h1>
-        <img class="header__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
-        <button class="header__button">Вход или регистрация</button>
-        <form class="header__form" action="/submit" method="post">
-            <label class="header__label" for="username">Имя пользователя:</label>
-            <input class="header__input" type="text" id="username" name="username"
-        placeholder="Введите ваше имя">
-        
-            <label class="header__label" for="password">Пароль:</label>
-            <input class="header__input" type="password" id="password" name="password"
-        placeholder="Введите пароль">
-
-            <label class="header__label" for="email">Email:</label>
-            <input class="header__input" type="email" id="email" name="email"
-        placeholder="Введите ваш email">
-        
-            <input type="submit" value="Отправить">
-        </form>    
+    <header class="header container">
+        <a class="header__logo-wrap" href="index.html">
+            <img class="haeder__logo" src="images/images (1).jpeg" alt="Логотип" width="100" height="100">
+            <h1 class="header__title">LingvoLand</h1>
+        </a>
+        <div class="header__buttons">
+            <a class="header__button" href="#">Вход</a>
+            <a class="header__button" href="#">Регистрация</a>
+        </div>
         <nav class="header__menu">
             <ul class="menu">
-                <li class="menu__item menu__item--active">
-                    <a class="menu__link" href="#about">О школе</a>
-                </li>
                 <li class="menu__item menu__item--active">
                     <a class="menu__link" href="#about">Схема обучения</a>
                 </li>
@@ -50,63 +37,89 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="studying_english">
-            <h2 class="studying">Схема обучения</h2>
-            <div class="studying_card">
-                <p class="studying_level">A1</p>
-                <p class="studying_description"></p>
+    <main class="main container">
+        <div class="studying__english">
+            <h2 class="studying__title">Схема обучения</h2>
+            <div class="studying__card">
+                <p class="studying__level">A1 Beginner</p>
+                <p class="studying__description">«Прорыв» или начальный уровень английского языка. Словарный запас — менее 1500 слов. Находясь на данном этапе изучения, вы можете: 
+                    <ul>
+                        <li>понимать и использовать повседневные выражения, основные фразы, направленные на удовлетворение базовых потребностей;</li>
+                        <li>самостоятельно представляться на английском и представить других;</li>
+                        <li>задавать элементарные вопросы на личные темы и отвечать на них;</li>
+                        <li>взаимодействовать на базовом уровне английского языка, если англоязычный собеседник говорит медленно, четко и готов помочь в установлении коммуникации;</li>
+                        <li>понимать очень короткие надписи на английском с иллюстрациями.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">A2</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">A2 Elementary</p>
+                <p class="studying__description">«Продолжение пути» или элементарный уровень английского языка. Словарный запас — 1500–2500 слов. Перейдя на данный уровень, вы сможете:
+                    <ul>
+                        <li>понимать высказывания, относящиеся к самым насущным аспектам жизни;</li>
+                        <li>спросить дорогу и понять ответ;</li>
+                        <li>объясниться на английском языке в простых бытовых ситуациях, требующих прямого обмена информацией на знакомые вам темы;</li>
+                        <li>рассказать на английском, кто вы такой, где живете и с кем общаетесь, выразить свои базовые потребности;</li>
+                        <li>понять суть англоязычных телерепортажей в сопровождении видеоряда;</li>
+                        <li>прочесть и понять элементарное письмо на английском языке.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">B1</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">B1 Intermediat</p>
+                <p class="studying__description">«Пороговый» или средний уровень английского языка. Словарный запас — 2750–3250 слов. На этом уровне вы сможете:
+                    <ul>
+                        <li>правильно понимать суть высказываний на знакомые вам темы;</li>
+                        <li>объясниться на английском в большинстве ситуаций, возникающих во время путешествия в англоязычную страну;</li>
+                        <li>описать впечатления, события, мечты, надежды и стремления, вкратце изложить и обосновать свое мнение;</li>
+                        <li>смотреть англоязычные фильмы в оригинале, но порою догадываться о происходящем лишь по изображению на экране;</li>
+                        <li>прочесть простейшую инструкцию, а также рекламные брошюры, письма, короткие официальные документы;</li>
+                        <li>написать связное сообщение на английском языке на знакомую или интересную вам тематику.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">B2</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">B2</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">C1</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">C1</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">C2</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">C2</p>
+                <p class="studying__description"></p>
             </div>
         </div>
-        <div class="studying_french">
-            <h2 class="studying">Схема обучения</h2>
-            <div class="studying_card">
-                <p class="studying_level">A1</p>
-                <p class="studying_description"></p>
+        <div class="studying__french">
+            <h2 class="studying__title">Схема обучения</h2>
+            <div class="studying__card">
+                <p class="studying__level">A1</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">A2</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">A2</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">B1</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">B1</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">B2</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">B2</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">C1</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">C1</p>
+                <p class="studying__description"></p>
             </div>
-            <div class="studying_card">
-                <p class="studying_level">C2</p>
-                <p class="studying_description"></p>
+            <div class="studying__card">
+                <p class="studying__level">C2</p>
+                <p class="studying__description"></p>
             </div>
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
         <div>
              Контакты
         </div>
@@ -114,13 +127,10 @@
              <p>lingvoland@gmail.com</p>
          <div>
              Мы в социальных сетях
-         </div>
-             <p>https://vk.com/lingvoland</p>
-             <p>https://t.me/lingvoland</p>    
-         <div class="menu">
-             <div class="menu_item menu_item--active">Главная</div>
-             <div class="menu_item">О нас</div>
-         </div>
+         <ul>
+             <li><a href="https://vk.com/lingvoland">ВКонткате</a></li>
+             <li><a href=https://t.me/lingvoland>Телеграм</a></li>
+         </ul>
          <img src="images/images.jpg" alt="Фон" width="700" height="200">
      </footer>
  </body>

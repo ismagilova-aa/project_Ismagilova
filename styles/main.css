@@ -66,3 +66,84 @@
    width: 100%; 
    object-fit: cover;
 }
+
+.teachers__card{
+    width: 340px;
+    padding: 15px;
+
+    background-color: rgb(140, 245, 248);
+    color: black;
+    box-shadow: 1px 2px 20px 5px #d7d7d7;
+}
+
+.teachers__name{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.teachers__job{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.teachers__list{
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.teachers__title{
+    width: 100%;
+}
+
+.teachers__image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.teachers__desc{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.studying__card{
+    width: 340px;
+    padding: 15px;
+
+    background-color: rgb(140, 245, 248);
+    color: black;
+    box-shadow: 1px 2px 20px 5px #d7d7d7;
+}
+
+.studying__level{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.studying__description{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.studying__list{
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}

@@ -117,10 +117,10 @@
 }
 
 .studying__card{
-    width: 550px;
+    width: 340px;
     padding: 15px;
 
-    background-color: rgb(61, 255, 164);
+    background-color: rgb(140, 245, 248);
     color: black;
     box-shadow: 1px 2px 20px 5px #d7d7d7;
 }
@@ -128,7 +128,7 @@
 .studying__level{
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
@@ -136,43 +136,14 @@
 .studying__description{
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .studying__list{
     margin: 0;
     padding: 20px 0;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     list-style-type: none;
 }
-
-.studying__title{
-    width: 100%;
-}
-
-.studying__desc{
-    font-size: 15px;
-}
-
-.footer__info{
-    display: flex;
-    gap: 10px;
-
-    background-color: rgb(205, 250, 132);
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.footer__wrap-right{
-    width: 500px;
-    flex-shrink: 0;
-}
-
-.footer__wrap-left{
-    display: flex;
-    flex-direction: column;
-}
-   
-

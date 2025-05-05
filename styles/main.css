@@ -21,6 +21,19 @@
     margin-right: auto;
 }
 
+.about__button{
+    transition: background-color 0.3s,
+    color 0.3s;
+   }
+.about__button:hover{
+    background-color: #218838;
+    color: #ffffff;
+   }
+.about__button:active{
+    background-color: #1e7e34;
+    color: #ffffff;
+   }
+
 .about__wrap-left{
     display: flex;
     flex-direction: column;
@@ -38,6 +51,20 @@
     flex-direction: column;
 }
 
+.news__card{
+    transition: transform 0.3s;
+   }
+.news__card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   }
+.news__card{
+    transition: outline 0.3s;
+   }  
+.news__card:hover {
+    outline: 5px solid #f7feff;
+   }
+
 .news__discription{
     margin-top: 0;
     margin-bottom: 15px;
@@ -51,6 +78,24 @@
     text-decoration: none;
     text-align: center;
     margin-top: auto;
+}
+
+.news__button{
+    transition: background-color 0.3s,
+    color 0.3s;
+   }
+.news__button:hover{
+    background-color: rgb(166, 195, 202);
+    color: #ffffff;
+   }
+.news__button:active{
+    background-color:  rgb(140, 245, 248);
+    color: #ffffff;
+   }
+
+.about__wrap-left{
+    display: flex;
+    flex-direction: column;
 }
 
 .news__list{
@@ -75,6 +120,20 @@
     color: black;
     box-shadow: 1px 2px 20px 5px #d7d7d7;
 }
+
+.teachers__card{
+    transition: transform 0.3s;
+   }
+.teachers__card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   }
+.teachers__card{
+    transition: outline 0.3s;
+   }  
+.teachers__card:hover {
+    outline: 5px solid #00d9ff;
+   }
 
 .teachers__name{
     margin-top: 15px;
@@ -117,13 +176,28 @@
 }
 
 .studying__card{
-    width: 340px;
+    width: 700px;
     padding: 15px;
 
     background-color: rgb(140, 245, 248);
     color: black;
     box-shadow: 1px 2px 20px 5px #d7d7d7;
 }
+
+.studying__card{
+    transition: transform 0.3s;
+   }
+.studying__card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   }
+.studying__card{
+    transition: outline 0.3s;
+   }  
+.studying__card:hover {
+    outline: 5px solid #00d9ff;
+   }
+   
 
 .studying__level{
     margin-top: 15px;

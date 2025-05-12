@@ -29,10 +29,6 @@
     background-color: #218838;
     color: #ffffff;
    }
-.about__button:active{
-    background-color: #1e7e34;
-    color: #ffffff;
-   }
 
 .about__wrap-left{
     display: flex;
@@ -68,6 +64,11 @@
 .news__discription{
     margin-top: 0;
     margin-bottom: 15px;
+    font-weight: 200;
+    font-style: inherit;
+    font-size: large;
+    line-height: 0,5cm;
+    color: black;
 }
 
 .news__button{
@@ -220,4 +221,12 @@
     gap: 20px;
     flex-wrap: wrap;
     list-style-type: none;
+}
+
+.feedback{
+    font-weight: 200;
+    font-style: oblique;
+    font-size: large;
+    line-height: 0,5cm;
+    color: black;
 }

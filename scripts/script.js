@@ -14,18 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // *         3.3.2. Нет: продолжаем.
     // * 4. Конец.
     
-    const teachersImg = document.querySelector(".teachers__image");
+    const teachersImg = document.querySelectorAll(".teachers__card");
     
-    teachersImgImg.forEach((item, index) => {
+    teachersImg.forEach((item, index) => {
         const teachersText = document.querySelectorAll('.teachers__desc');
 
         item.addEventListener('mouseenter', () => {
-            item.style.opacity = 0.5;
             teachersText[index].removeAttribute('hidden');
         });
 
         item.addEventListener('mouseleave', () => {
-            item.style.opacity = 1;
             teachersText[index].setAttribute('hidden', true);
         });
     });
@@ -35,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
 /* 1. Динамический вывод карточек тегов. Часть 1 (Используем с данными) */
 const teachersContainer = document.querySelector(".teachers__list");
 
-if (trenersContainer) {
-    const dataTitleTreners= [
+if (teachersContainer) {
+    const dataTitleTeachers= [
         "Ким Маргарита Сергеевна",
         "Иванова Елена Андреевна",
         "Сидорова Яна Павловна",
-        "Ммарков Марк Маркович",
+        "Марков Марк Маркович",
     ];
 
     const titleTeachers =

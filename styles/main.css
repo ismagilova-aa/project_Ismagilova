@@ -1,7 +1,7 @@
 .about{
     display: flex;
     gap: 10px;
-    background-color: rgb(205, 250, 132);
+    background-color: rgb(232, 173, 255);
     color: rgb(0, 0, 0);
     padding: 10px;
 }
@@ -14,8 +14,8 @@
 .about__button{
     display: block;
     padding: 10px;
-    color: black;
-    background-color: rgb(180, 180, 180);
+    color: #ffffff;
+    background-color: rgb(49, 3, 255);
     text-decoration: none;
     margin-top: auto;
     margin-right: auto;
@@ -26,8 +26,8 @@
     color 0.3s;
    }
 .about__button:hover{
-    background-color: #218838;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: rgb(49, 3, 255);
    }
 
 .about__wrap-left{
@@ -39,12 +39,16 @@
     width: 350px;
     padding: 15px;
 
-    background-color: aliceblue;
+    background-color:  rgb(236, 193, 253);
     color: black;
     box-shadow: 1px 2px 20px 5px #d7d7d7;
 
     display: flex;
     flex-direction: column;
+}
+
+.news__about{
+    font-size: x-large;
 }
 
 .news__card{
@@ -58,7 +62,7 @@
     transition: outline 0.3s;
    }  
 .news__card:hover {
-    outline: 5px solid #f7feff;
+    outline: 5px solid #d56bff;
    }
 
 .news__discription{
@@ -74,8 +78,8 @@
 .news__button{
     display: block;
     padding: 10px;
-    background-color: rgb(180, 180, 180);
-    color: black;
+    background-color: rgb(49, 3, 255);
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
     margin-top: auto;
@@ -86,8 +90,8 @@
     color 0.3s;
    }
 .news__button:hover{
-    background-color: rgb(166, 195, 202);
-    color: #ffffff;
+    background-color: #ffffff;
+    color: rgb(49, 3, 255);
    }
 .news__button:active{
     background-color:  rgb(140, 245, 248);
@@ -120,7 +124,7 @@
     padding: 15px;
     position: relative;
 
-    background-color: rgb(140, 245, 248);
+    background-color:  rgb(236, 193, 253);
     color: black;
     box-shadow: 1px 2px 20px 5px #d7d7d7;
 }
@@ -136,7 +140,7 @@
     transition: outline 0.3s;
    }  
 .teachers__card:hover {
-    outline: 5px solid #00d9ff;
+    outline: 5px solid #d56bff;
    }
 
 .teachers__name{
@@ -178,18 +182,23 @@
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 300;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
 
     position: absolute;
-    width: 250px;
+    top: 0;
+    background-color: #00000086;
+    overflow-y: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .studying__card{
     width: 700px;
     padding: 15px;
 
-    background-color: rgb(140, 245, 248);
+    background-color: rgb(236, 193, 253);
     color: black;
     box-shadow: 1px 2px 20px 5px #d7d7d7;
 }
@@ -205,7 +214,7 @@
     transition: outline 0.3s;
    }  
 .studying__card:hover {
-    outline: 5px solid #00d9ff;
+    outline: 5px solid #d56bff;
    }
    
 
@@ -260,7 +269,7 @@
     justify-content: center; 
     align-items: center; 
     column-gap: 64px; 
-    background-color: #218838; 
+    background-color:rgb(49, 3, 255); 
     color: #fff; 
 }
 
@@ -285,5 +294,5 @@
     top: 0; 
     right: 0; 
     padding: 10px; 
-    background-color: #3bfd00; 
+    background-color: #4a56ff; 
 }

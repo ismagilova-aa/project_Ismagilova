@@ -161,10 +161,13 @@
 .teachers__list{
     margin: 0;
     padding: 20px 0;
-    display: flex;
     gap: 20px;
     flex-wrap: wrap;
     list-style-type: none;
+    margin-top: 60px; 
+    display: flex; 
+    column-gap: 40px; 
+
 }
 
 .teachers__title{
@@ -266,6 +269,7 @@
     width: 100%;
     padding: 50px 20px; 
     display: flex; 
+    transform: translate(-50%, -50%);
     justify-content: center; 
     align-items: center; 
     column-gap: 64px; 
@@ -295,4 +299,77 @@
     right: 0; 
     padding: 10px; 
     background-color: #4a56ff; 
+}
+
+.price__card{
+    width: 300px;
+    padding: 15px;
+    position: relative;
+
+    background-color:  rgb(236, 193, 253);
+    color: black;
+    box-shadow: 1px 2px 20px 5px #d7d7d7;
+
+    padding: 30px 0; 
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+    border: 1px solid rgba(20, 16, 36, 0.2); 
+    border-radius: 20px;
+    text-align: center; 
+    height: 400px;
+    transition: transform 0.3s ease-out; 
+}
+
+.price__card{
+    transition: transform 0.3s;
+}
+.price__card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.price__card{
+    transition: outline 0.3s;
+}  
+.price__card:hover {
+    outline: 5px solid #d56bff;
+}
+
+.price__level{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.price__price{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.price__list{
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.price__title{
+    width: 100%;
+}
+
+
+.price__description{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
 }

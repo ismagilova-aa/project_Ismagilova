@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LingvoLand</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <scripts src="script.js" defer></scripts>
@@ -52,6 +53,31 @@
             <img src="images/young-people-talking-different-languages_23-2148377121.avif" alt="Изображение" width="500"
                 height="200">
         </section>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="images__item" src="images/pictureone.png" alt="Picture one" class="swiper-slide-image" width="500">
+              </div>
+              <div class="swiper-slide">
+                <img class="images__item" src="images/picturetwo.png" alt="Picture two" class="swiper-slide-image" width="500">
+              </div>
+              <div class="swiper-slide">
+                <img class="images__item" src="images/picturethree.jpg" alt="Picture three" class="swiper-slide-image" width="500">
+              </div>
+              <div class="swiper-slide">
+                <img class="images__item" src="images/picturefour.jpg" alt="Picture four" class="swiper-slide-image" width="500">
+              </div>
+              <div class="swiper-slide">
+                <img class="images__item" src="images/picturefive.jpg" alt="Picture five" class="swiper-slide-image" width="500">
+              </div>
+              <div class="swiper-slide">
+                <img class="images__item" src="images/picturesix.jpg" alt="Picture six" class="swiper-slide-image" width="500">
+              </div>
+            </div>
+            <div class="swiper-button-pagination"></div>
+        </div>
+
         <section class="about">
             <div class="about__wrap-left">
                 <h2 class="about__title">О нас</h2>
@@ -71,12 +97,13 @@
                     <p class="application__text">Акция действительна до 30 июня 2025 года</p>
                 </div>
                 <button class="application__close" type="button">Закрыть</button>
-                <form action="/"class="application__form">
-                    <input class="application__input" type="text" placeholder="Имя">
-                    <input class="application__input" type="tel" placeholder="Телефон">
-                    <input class="application__input" type="email" placeholder="E-mail">
-                    <button class="application__button">Отправить заявку</button>
+                <form action="/"class="application__form"> id="formApplication"
+                    <input class="application__input" type="text" placeholder="Имя" id="username">
+                    <input class="application__input" type="tel" placeholder="Телефон" id="tel">
+                    <input class="application__input" type="email" placeholder="E-mail" id="email">
+                    <button class="application__button" type="submit">Отправить заявку</button>
                 </form>
+                <p id="application-message" class="application__message"></p>
             </section>
         </div>
         <section id="news">
@@ -126,6 +153,8 @@
 </div>
 
     <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 </body>
 

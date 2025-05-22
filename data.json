@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "filename": "imageone.png",
+        "description": "Регистрация."
+    },
+    {
+        "id": 2,
+        "filename": "imagetwo.png",
+        "description": "Формат."
+    },
+    {
+        "id": 3,
+        "filename": "imagethree.png",
+        "description": "Занятие."
+    },
+    {
+        "id": 4,
+        "filename": "imagefour.png",
+        "description": "Задания."
+    },{
+        "id": 5,
+        "filename": "imagefive.png",
+        "description": "Поддержка."
+    },{
+        "id": 6,
+        "filename": "imagesix.png",
+        "description": "Сертификат."
+    }
+]

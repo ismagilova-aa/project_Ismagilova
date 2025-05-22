@@ -65,12 +65,143 @@ window.addEventListener("click", (event) => {
     }
 });
 
-// Закрытие модального окна при коике на кнопку закрытия
+// Закрытие модального окна при клике на кнопку закрытия
 const closeModalButton = document.querySelector(".application__close");
 
 closeModalButton.addEventListener("click", () => {
     modalApplication.setAttribute("hidden", true);
 });
+
+const cardsPrice = document.querySelector('.price');
+if (cardsPrice) {
+    const priceList = cardsPrice.querySelector('.price__list');
+    
+    const cardsPriceData = {
+        price1: {
+            level: 'Пробный урок английского языка',
+            price: 'бесплатно',
+            description: 'Бесплатный пробный урок в действующих группах. По уровню и возрасту',
+            button: 'Записаться'
+        },
+        price2: {
+            level: 'Английский язык для дошкольников',
+            price: '350₽/час',
+            description: 'Групповые и индивидуальные занятия для дошкольников',
+            button: 'Записаться'
+        },
+        price3: {
+            level: 'Английский язык для учащихся младших классов',
+            price: '400₽/час',
+            description: 'Групповые и индивидуальные занятия для учащихся начальной школы',
+            button: 'Записаться'
+        },
+        price4: {
+            level: 'Английский язык для школьников',
+            price: '450₽/час',
+            description: 'Групповые и индивидуальные занятия для школьников средних классов, с учетом возраста и уровня знаний',
+            button: 'Записаться'
+        },
+        price5: {
+            level: 'Английский язык для взрослых',
+            price: '500₽/час',
+            description: 'Групповое и индивидуальное обучение разговорному английскому языку для взрослых, начинающих и продолжающих обучение',
+            button: 'Записаться'
+        },
+        price6: {
+            level: 'Французский язык',
+            price: '450₽/час',
+            description: 'Групповые и индивидуальные занятия обучения французскому языку для взрослых и детей',
+            button: 'Записаться'
+        },
+        price7: {
+            level: 'Летний интенсивный курс английского языка',
+            price: 'от 3000₽',
+            description: 'Летний интенсив "Разговорный английский" для взрослых',
+            button: 'Записаться'
+        }
+    }
+
+    const createCard = (level, price, description, button) => {
+        const card = `
+        <li class="price__item">
+            <p class="price__level">${level}</p>
+            <p class="price__price">${price}</p>
+            <p class="price__description">${description}</p>
+            <button class="price__button">${button}</button>
+        </li>
+    `;
+        return card;
+    }
+
+    for (const cardKey in cardsPriceData) {
+        const card = cardsPriceData[cardKey];
+        const cardElement = createCard(card.level, card.price, card.description, card.button);
+        priceList.insertAdjacentHTML('beforeend', cardElement);
+    }
+}
+
+const cardsImages = document.querySelector(".images");
+    if (cardsImages) {
+        const cardListImages = cardsImages.querySelector(".images__list");
+
+        const apiUrl = "images.json";
+
+        const createCard = (imageUrl, imageAlt, imageWidth) => {
+          
+            const image = `
+            <li class="images__item">
+                <img class="images__picture" src="${imageUrl[0]}" alt="${imageAlt}" width="${imageWidth}">
+                <img class="images__picture" src="${imageUrl[1]}" alt="${imageAlt}" width="${imageWidth}" style="display: none;">
+            </li>
+        `;
+
+            return image;
+        };
+        const apiUrl = "images.json";
+  
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then((images) => {
+                console.log(images); 
+                console.log(typeof images);
+
+                images.forEach((item) => {
+                    const cardElement = createCard(
+                        item.imageUrl,
+                        item.imageAlt,
+                        item.imageWidth
+                    );
+                    cardListImages.insertAdjacentHTML("beforeend", cardElement);
+                });
+                const pictures = document.querySelectorAll(".images__picture");
+                if (pictures) {
+                    pictures.forEach((picture) => {
+                        picture.addEventListener("click", () => {
+                            const parentItem = picture.parentElement;
+                            const parentPictures =
+                                parentItem.querySelectorAll(".images__picture");
+                                parentPictures.forEach((parentPictures) => {
+                                    if (parentPictures !== picture) {
+                                        parentPictures.style.display = "block"; 
+                                    } else {
+                                        parentPictures.style.display = "none"; 
+                                    }
+                                });
+                            });
+                        });
+                    }                    
+                });
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 

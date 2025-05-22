@@ -1,0 +1,50 @@
+[
+    {
+        "imageURL" : [
+            "img/logoprocess.png",
+            "img/pictureone.png"
+        ],
+        "imageAlt" : "Процесс",
+        "imageWidth" : 180
+    },
+    {
+        "imageURL" : [
+            "img/logoprocess.png",
+            "img/picturetwo.png"
+        ],
+        "imageAlt" : "Процесс",
+        "imageWidth" : 180
+    },
+    {
+        "imageURL" : [
+            "img/logoprocess.png",
+            "img/picturethree.png"
+        ],
+        "imageAlt" : "Процесс",
+        "imageWidth" : 180
+    },
+    {
+        "imageURL" : [
+            "img/logoprocess.png",
+            "img/picturefour.png"
+        ],
+        "imageAlt" : "Процесс",
+        "imageWidth" : 180
+    },
+    {
+        "imageURL" : [
+            "img/logoprocess.png",
+            "img/picturefive.png"
+        ],
+        "imageAlt" : "Процесс",
+        "imageWidth" : 180
+    },
+    {
+        "imageURL" : [
+            "img/logoprocess.png",
+            "img/picturesix.png"
+        ],
+        "imageAlt" : "Процесс",
+        "imageWidth" : 180
+    }
+]

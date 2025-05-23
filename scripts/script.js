@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // *             3.3.1.1. Скрываем элементы с описанием.
     // *         3.3.2. Нет: продолжаем.
     // * 4. Конец.
-    
+
     const teachersImg = document.querySelectorAll(".teachers__card");
-    
+
     teachersImg.forEach((item, index) => {
         const teachersText = document.querySelectorAll('.teachers__desc');
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const teachersContainer = document.querySelector(".teachers__list");
 
 if (teachersContainer) {
-    const dataTitleTeachers= [
+    const dataTitleTeachers = [
         "Ким Маргарита Сергеевна",
         "Иванова Елена Андреевна",
         "Сидорова Яна Павловна",
@@ -42,17 +42,17 @@ if (teachersContainer) {
     ];
 
     const titleTeachers =
-         teachersContainer.querySelectorAll(".teachers__name");
+        teachersContainer.querySelectorAll(".teachers__name");
 
-         titleTeachers.forEach((item, index) => {
-            item.textContent = dataTitleTeachers[index];
-        });
- }
+    titleTeachers.forEach((item, index) => {
+        item.textContent = dataTitleTeachers[index];
+    });
+}
 
 /* 4. Появление модального окна*/
 const aboutButtonModal = document.querySelector(".about__button");
 const modalApplication = document.querySelector(".applications");
-    
+
 if (aboutButtonModal && modalApplication) {
     aboutButtonModal.addEventListener("click", () => {
         modalApplication.removeAttribute("hidden");
@@ -72,50 +72,42 @@ closeModalButton.addEventListener("click", () => {
     modalApplication.setAttribute("hidden", true);
 });
 
-//ИСПОЛЬЗОВАНИЕ LOCALSTORAGE задание 3.7
-// Объявляем переменную formApplication и помещаем в нее элемент с id "formApplication"
-const formApplication = document.querySelector("#formApplication"); 
-// Проверяем, существует ли элемент formApplication
-if (formApplication) {  
-    // Добавляем обработчик события для отправки формы
-   formApplication.addEventListener("submit", (event) => {
-     event.preventDefault(); // Предотвращаем отправку формы
-    // Объявляем переменные "username", "tel","email",   и помещаем в нее элементы с id из формы
-     const username = formApplication.querySelector("#username").value;
-     const tel = formApplication.querySelector("#tel").value;
-     const email = formApplication.querySelector("#email").value;
-})
-     // Объявляем переменную modalMessage и помещаем в нее элемент для отображения сообщений о статусе заявки
-const modalMessage = modalApplication.querySelector("#application-message");
-      // Проверка длины имени пользователя
-      if (username.length < 3) {
-         modalMessage.textContent = "Имя пользователя должно содержать не менее 3 символов";
-         modalMessage.style.color = "black"; // Устанавливаем цвет сообщения об ошибке
-         return;
-      }
-    
-       // Проверка номера телефона
-      if (!/^\d{10,}$/.test(tel)) {
-          modalMessage.textContent = "Номер телефона должен содержать только цифры и быть не менее 10 символов";
-          modalMessage.style.color = "black"; // Устанавливаем цвет сообщения
-          return;
-      }
-    
-      // Здесь можно добавить отправку данных на сервер
-      modalMessage.textContent = "Заявка отправлена!";
-      modalMessage.style.color = "green"; // Устанавливаем цвет сообщения для успешной отправки
-    
-      // Записываем данные в localStorage
-      window.localStorage.setItem("username", username);
-      window.localStorage.setItem("tel", tel);
-      window.localStorage.setItem("email", email);
-});
+document.addEventListener("DOMContentLoaded", () => {
+    const formApplication = document.querySelector("#formApplication");
+    if (formApplication) {
+        formApplication.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const username = formApplication.querySelector("#username").value;
+            const tel = formApplication.querySelector("#tel").value;
+            const email = formApplication.querySelector("#email").value;
+        })
+        const modalMessage = modalApplication.querySelector("#application-message");
+        if (username.length < 3) {
+            modalMessage.textContent = "Имя пользователя должно содержать не менее 3 символов";
+            modalMessage.style.color = "black";
+            return;
+        }
 
+        if (!/^\d{10,}$/.test(tel)) {
+            modalMessage.textContent = "Номер телефона должен содержать только цифры и быть не менее 10 символов";
+            modalMessage.style.color = "black";
+            return;
+        }
+
+
+        modalMessage.textContent = "Заявка отправлена!";
+        modalMessage.style.color = "green";
+
+        window.localStorage.setItem("username", username);
+        window.localStorage.setItem("tel", tel);
+        window.localStorage.setItem("email", email);
+    };
+})
 
 const cardsPrice = document.querySelector('.price');
 if (cardsPrice) {
     const priceList = cardsPrice.querySelector('.price__list');
-    
+
     const cardsPriceData = {
         price1: {
             level: 'Пробный урок английского языка',
@@ -181,81 +173,96 @@ if (cardsPrice) {
 }
 
 const cardsImages = document.querySelector(".images");
-    if (cardsImages) {
-        const cardListImages = cardsImages.querySelector(".images__list");
+if (cardsImages) {
+    const cardListImages = cardsImages.querySelector(".images__list");
 
-        const apiUrl = "images.json";
+    const apiUrl = "images.json";
 
-        const createCard = (imageUrl, imageAlt, imageWidth) => {
-          
-            const image = `
+    const createCard = (imageUrl, imageAlt, imageWidth) => {
+
+        const image = `
             <li class="images__item">
                 <img class="images__picture" src="${imageUrl[0]}" alt="${imageAlt}" width="${imageWidth}">
                 <img class="images__picture" src="${imageUrl[1]}" alt="${imageAlt}" width="${imageWidth}" style="display: none;">
             </li>
         `;
 
-            return image;
-        };
-        const apiUrl = "images.json";
-  
-        fetch(apiUrl)
-            .then((response) => response.json())
-            .then((images) => {
-                console.log(images); 
-                console.log(typeof images);
+        return image;
+    };
 
-                images.forEach((item) => {
-                    const cardElement = createCard(
-                        item.imageUrl,
-                        item.imageAlt,
-                        item.imageWidth
-                    );
-                    cardListImages.insertAdjacentHTML("beforeend", cardElement);
-                });
-                const pictures = document.querySelectorAll(".images__picture");
-                if (pictures) {
-                    pictures.forEach((picture) => {
-                        picture.addEventListener("click", () => {
-                            const parentItem = picture.parentElement;
-                            const parentPictures =
-                                parentItem.querySelectorAll(".images__picture");
-                                parentPictures.forEach((parentPictures) => {
-                                    if (parentPictures !== picture) {
-                                        parentPictures.style.display = "block"; 
-                                    } else {
-                                        parentPictures.style.display = "none"; 
-                                    }
-                                });
-                            });
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((images) => {
+            console.log(images);
+            console.log(typeof images);
+
+            images.forEach((item) => {
+                const cardElement = createCard(
+                    item.imageUrl,
+                    item.imageAlt,
+                    item.imageWidth
+                );
+                cardListImages.insertAdjacentHTML("beforeend", cardElement);
+            });
+            const pictures = document.querySelectorAll(".images__picture");
+            if (pictures) {
+                pictures.forEach((picture) => {
+                    picture.addEventListener("click", () => {
+                        const parentItem = picture.parentElement;
+                        const parentPictures =
+                            parentItem.querySelectorAll(".images__picture");
+                        parentPictures.forEach((parentPictures) => {
+                            if (parentPictures !== picture) {
+                                parentPictures.style.display = "block";
+                            } else {
+                                parentPictures.style.display = "none";
+                            }
                         });
-                    }                    
+                    });
                 });
+            }
+        });
 }
 
 
 const preloader = document.querySelector(".preloader");
-    const content = document.querySelector(".content");
-    if (preloader && content) {
-        setTimeout(() => {
-            preloader.style.opacity = "0";
-            preloader.style.visibility = "hidden";
+const content = document.querySelector(".content");
+if (preloader && content) {
+    setTimeout(() => {
+        preloader.style.opacity = "0";
+        preloader.style.visibility = "hidden";
 
-            content.style.display = "block";
+        content.style.display = "block";
 
-            preloader.remove();
-        }, 3000); 
-    }
+        preloader.remove();
+    }, 3000);
+}
 
 var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
     },
 });
+
+const sliders = document.querySelector('.swiper');
+if (sliders) {
+    const swiper1 = new Swiper(sliders, {
+        pagination: {
+            el: '.swiper-pagination',
+            type: "fraction",
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
+
 
 
 

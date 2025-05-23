@@ -533,3 +533,7 @@
        transform: translateY(-30px);/* круги поднимаются */
    }
 }
+
+.swiper mySwiper{
+    float: right;
+}

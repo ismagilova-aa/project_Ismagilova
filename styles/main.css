@@ -534,6 +534,24 @@
    }
 }
 
-.swiper mySwiper{
-    float: right;
+.swiper{
+    width: 700px;
+    height: 375px;
+    position: absolute; right: 0
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
 }
